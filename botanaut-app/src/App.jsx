@@ -1,0 +1,33 @@
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import Landing from './pages/Landing';
+import Home from './pages/Home';
+import About from './pages/About';
+import Planet from './pages/Planet';
+import Navbar from './components/Navbar';
+import './theme.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+function AppLayout() {
+  const location = useLocation();
+  const isLanding = location.pathname === '/'; // only true on landing
+
+  return (
+    <>
+      {!isLanding && <Navbar />}
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/planet" element={<Planet />} />
+      </Routes>
+    </>
+  );
+}
+
+export default function App() {
+  return (
+    <Router>
+      <AppLayout />
+    </Router>
+  );
+}
