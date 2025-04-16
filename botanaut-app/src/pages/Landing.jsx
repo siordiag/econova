@@ -16,19 +16,19 @@ export default function Landing() {
           [Accessing Earth Status Report…]
         </TypeIt>
 
-        <TypeIt as="p" options={{ speed: 20, startDelay: 1000, cursor: false }}>
+        <TypeIt as="p" options={{ speed: 20, startDelay: 2000, cursor: false }}>
           SYSTEM LOG: Climate instability detected.
         </TypeIt>
 
-        <TypeIt as="p" options={{ speed: 20, startDelay: 3000, cursor: false }}>
+        <TypeIt as="p" options={{ speed: 20, startDelay: 4000, cursor: false }}>
           INITIATING: Project EcoNOVA
         </TypeIt>
 
-        <TypeIt as="p" options={{ speed: 20, startDelay: 5000, cursor: false }}>
+        <TypeIt as="p" options={{ speed: 20, startDelay: 6000, cursor: false }}>
           Greetings, Cadet. I’m NOVA – your Eco-Companion.
         </TypeIt>
 
-        <TypeIt as="p" options={{ speed: 10, startDelay: 7000, cursor: false }}>
+        <TypeIt as="p" options={{ speed: 10, startDelay: 8000, cursor: false }}>
           Our mission: Replace harmful household products with eco-friendly alternatives. Your choices can shift the balance.
         </TypeIt>
 
@@ -37,7 +37,7 @@ export default function Landing() {
           options={{
             cursor: true,
             speed: 20,
-            startDelay: 10000,
+            startDelay: 13000,
             afterComplete: () => setShowButton(true),
           }}
         >
