@@ -9,7 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function AppLayout() {
   const location = useLocation();
-  const isLanding = location.pathname === '/'; // only true on landing
+  const isLanding = location.pathname === '/';
 
   return (
     <>

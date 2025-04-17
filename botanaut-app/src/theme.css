@@ -52,7 +52,7 @@ body {
     width: 100%;
     font-size: 1.25rem;
     line-height: 1.6;
-    min-height: 200px; /* Lock height so container doesn't grow */
+    min-height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
