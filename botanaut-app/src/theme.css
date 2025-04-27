@@ -264,3 +264,156 @@ html, body, #root {
   padding-bottom: 25px;
   padding-top: 25px;
 }
+
+/*ecoswap page*/
+/* Swap Total Counter */
+.swap-total {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: black;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 30px;
+  margin-bottom: 20px;
+}
+
+/* Welcome Paragraph inside .ecoswap-1 already exists! (no change needed) */
+
+/* Search Section */
+.ecoswap-search-box {
+  background-color: var(--brand-tertiary);
+  padding: 40px 20px;
+  border-radius: 20px;
+  max-width: 600px;
+  margin: 0 auto 60px auto;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  color: black;
+}
+
+.ecoswap-search-input {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.ecoswap-search-bar {
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  width: 250px;
+  text-align: center;
+}
+
+.ecoswap-button {
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+/* Scroll Down Arrow Animation */
+.scroll-down-arrow {
+  font-size: 2rem;
+  margin-top: 20px;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(8px);
+  }
+  60% {
+    transform: translateY(4px);
+  }
+}
+
+/* Swap Results and Selection */
+.ecoswap-results-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+/* Swap Option Cards (left side) */
+.ecoswap-options-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-width: 400px;
+  width: 100%;
+}
+
+.ecoswap-card {
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  width: 100%;
+}
+
+.ecoswap-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+.ecoswap-card.selected {
+  border: 2px solid var(--brand-tertiary);
+}
+
+/* Selected Item Display (right side) */
+.ecoswap-selected-display {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  color: black;
+  text-align: center;
+}
+
+.selected-swap-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* Add to Shopping List Button */
+.add-to-shopping-list-button {
+  background-color: var(--brand-tertiary);
+  color: black;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-shopping-list-button:hover {
+  background-color: var(--brand-secondary);
+}
