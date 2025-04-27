@@ -29,10 +29,9 @@ html, body, #root {
     --outline-secondary:var(--brand-tertiary);
 }
 
-body {
+.homepage {
   background-image: url("/images/planet-background.png");
-  background-color: #f5f5f5;
-  background-size: cover;
+  background-color: #ffffff;
   background-repeat: no-repeat;
   
 }
@@ -159,7 +158,7 @@ body {
 }
 
 .page1 {
-  font-family: "SpaceMono";
+  font-family: "SpaceMono-Bold";
   padding-top: 100px;
   padding-bottom: 200px;
   text-align: center;
@@ -168,9 +167,8 @@ body {
 
 .ecoswap-bg {
   background-image: url(/images/ecoswap.svg);
-  background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  min-height: 100vh
 }
 
 .ecoswap-1 {
@@ -181,4 +179,41 @@ body {
   color: var(--text-color);
   text-align: center;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.down-arrow {
+  height: 100px;
+  padding-top: 25px;
+}
+
+.home-button {
+  background-color: var(--brand-tertiary);
+  color: var(--brand-primary);
+  text-decoration: none;
+  padding: 14px 25px;
+  border-radius: 100px;
+}
+
+.home-button:hover {
+  color: var(--brand-secondary);
+}
+
+.homepage-content {
+  font-family: "SpaceMono";
+}
+
+.homepage-content h2 {
+  font-family: "SpaceMono-Bold";
+}
+
+.planet-bg {
+  background-image: url(/images/planet-page.svg);
+  background-repeat: no-repeat;
+  min-height: 100vh
+}
+
+.nova3 {
+  height: 500px;
+  flex-shrink: 0;
+  aspect-ratio: 405.32/739.00;
 }
