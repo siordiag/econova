@@ -71,22 +71,13 @@ html, body, #root {
   }
 
   .nav-bar-container {
-    position: relative;
-    width: 100%;
-    background: linear-gradient(
-      to bottom,
-      rgba(36, 45, 68, 0.8) 0%,
-      rgba(36, 45, 68, 0.5) 50%,
-      rgba(36, 45, 68, 0) 100%
-    );
-    padding: 1rem 5% 2rem 5%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    z-index: 10;
-    backdrop-filter: blur(6px);
+    padding: 10px 20px;
+    padding-right: 100px;
+    background-color: transparent;
   }
-  
   
 .navbar-logo img {
     height: 90px;
@@ -104,15 +95,14 @@ html, body, #root {
 }
   
 .custom-link {
-  color: var(--text-color);
-  font-family: "SpaceMono";
-  font-size: 1.4rem;
-  text-decoration: none;
-  position: relative;
-  padding-bottom: 4px;
-  transition: color 0.2s ease;
+    color: var(--brand-tertiary);
+    font-family: "SpaceMono";
+    font-size: 1.1rem;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 4px;
+    transition: color 0.2s ease;
 }
-
   
   .custom-link::after {
     content: '';
