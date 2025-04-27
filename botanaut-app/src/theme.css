@@ -273,11 +273,7 @@ transition: color 0.2s ease;
 .ecoswap-bg {
   background-image: url("/images/ecoswap.svg");
   background-repeat: no-repeat;
-  background-size: cover; /* make the background image fill the container */
-  background-position: center;
   min-height: 100vh;
-  width: 100%;
-  background-attachment: fixed; /* optional: for cool parallax effect */
 }
 
 
@@ -319,7 +315,6 @@ transition: color 0.2s ease;
 .planet-bg {
   background-image: url(/images/planet-page.svg);
   background-repeat: no-repeat;
-  min-height: 100vh
 }
 
 .nova3 {
@@ -330,18 +325,25 @@ transition: color 0.2s ease;
 
 .status {
   font-family: "SpaceMono-Bold";
-  color: var(--brand-tertiary);
+  color: #E7AAA4;;
+  text-align: center;
+  font-size: 30px;
+  justify-content: flex;
+  padding: 15px;
 }
 
 .planets-row img {
-  padding: 10px;
+  padding: 15px;
   justify-content: flex;
 }
 
 .planet-description {
   width: 324px;
-  height: 572px;
+  height: 470px;
+  font-size: 20px;
+  text-align: center;
   flex-shrink: 0;
+  padding: 20px;
   background-color: #EEEAE7;
   border-radius: 25px;
   filter: drop-shadow(4px 20px 19.6px rgba(0, 0, 0, 0.25));
@@ -369,7 +371,17 @@ transition: color 0.2s ease;
   padding-top: 25px;
 }
 
-/*ecoswap page*/
+.planet-caption {
+  color: var(--brand-tertiary);
+  font-family: "SpaceMono-Bold";
+  text-align: center;
+  font-size: 64px;
+  padding: 90px;
+}
+
+.unlocked {
+  color: var(--brand-tertiary);
+}
 /* Swap Total Bubble */
 .swap-total {
   display: inline-block;
@@ -392,7 +404,7 @@ transition: color 0.2s ease;
 }
 
 .ecoswap-search-bar {
-  background-color: var(--brand-tertiary); /* light green typing area */
+  background-color: var(--brand-tertiary); /* light green input */
   color: black;
   border: none;
   border-radius: 999px;
@@ -414,12 +426,12 @@ transition: color 0.2s ease;
 }
 
 .ecoswap-button:hover {
-  background-color: var(--brand-secondary); /* light purple hover */
+  background-color: var(--brand-secondary); /* light purple on hover */
 }
 
 /* Down Arrow */
-.scroll-down-arrow {
-  font-size: 2rem;
+.down-arrow {
+  height: 80px;
   margin-top: 20px;
   animation: bounce 2s infinite;
 }
@@ -435,7 +447,8 @@ transition: color 0.2s ease;
     transform: translateY(4px);
   }
 }
-/* Results container holding both the options list and selected swap display */
+
+/* Results Section (Swap options and Selected swap) */
 .ecoswap-results-container {
   display: flex;
   flex-wrap: wrap;
@@ -447,7 +460,7 @@ transition: color 0.2s ease;
   width: 100%;
 }
 
-/* Options list on the left */
+/* Swap options list on the left */
 .ecoswap-options-list {
   display: flex;
   flex-direction: column;
@@ -456,7 +469,7 @@ transition: color 0.2s ease;
   width: 100%;
 }
 
-/* Each swap card */
+/* Individual swap card */
 .ecoswap-card {
   background-color: white;
   color: black;
@@ -477,7 +490,7 @@ transition: color 0.2s ease;
   border: 2px solid var(--brand-tertiary);
 }
 
-/* Selected swap preview on the right */
+/* Selected swap details on the right */
 .ecoswap-selected-display {
   background-color: rgba(255, 255, 255, 0.7);
   border-radius: 20px;
@@ -499,7 +512,7 @@ transition: color 0.2s ease;
   margin-bottom: 20px;
 }
 
-/* Shopping list button */
+/* Add to Shopping List Button */
 .add-to-shopping-list-button {
   background-color: var(--brand-tertiary);
   color: black;
