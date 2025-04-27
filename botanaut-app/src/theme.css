@@ -3,6 +3,7 @@ html, body, #root {
   margin: 0;
   padding: 0;
   width: 100%;
+  overflow-x: hidden;
   }
 
 @font-face {
@@ -29,11 +30,12 @@ html, body, #root {
     --outline-secondary:var(--brand-tertiary);
 }
 
+
 .homepage {
   background-image: url("/images/planet-background.png");
   background-color: #ffffff;
   background-repeat: no-repeat;
-  
+  position: relative;
 }
 
 .bg-brand-primary {
@@ -74,7 +76,7 @@ html, body, #root {
     justify-content: space-between;
     padding: 10px 20px;
     padding-right: 100px;
-    margin-top: 25px;
+    background-color: transparent;
   }
   
 .navbar-logo img {
@@ -93,7 +95,7 @@ html, body, #root {
 }
   
 .custom-link {
-    color: var(--text-color);
+    color: var(--brand-tertiary);
     font-family: "SpaceMono";
     font-size: 1.1rem;
     text-decoration: none;
@@ -157,9 +159,13 @@ html, body, #root {
   aspect-ratio: 384/427;
 }
 
+.nova2 {
+  width: 700px;
+}
+
 .page1 {
   font-family: "SpaceMono-Bold";
-  padding-top: 100px;
+  padding-top: 150px;
   padding-bottom: 200px;
   text-align: center;
   font-size: 40px;
@@ -216,4 +222,45 @@ html, body, #root {
   height: 500px;
   flex-shrink: 0;
   aspect-ratio: 405.32/739.00;
+}
+
+.status {
+  font-family: "SpaceMono-Bold";
+  color: var(--brand-tertiary);
+}
+
+.planets-row img {
+  padding: 10px;
+  justify-content: flex;
+}
+
+.planet-description {
+  width: 324px;
+  height: 572px;
+  flex-shrink: 0;
+  background-color: #EEEAE7;
+  border-radius: 25px;
+  filter: drop-shadow(4px 20px 19.6px rgba(0, 0, 0, 0.25));
+  font-family: "SpaceMono";
+}
+
+.planethead {
+  width: 700px;
+}
+
+.greeting {
+  position: absolute;
+  top: 500px;
+  left: -100px;
+  height: 150px;
+  width: auto;
+}
+
+.planets {
+  height: 500px;
+}
+
+.button-description p {
+  padding-bottom: 25px;
+  padding-top: 25px;
 }
