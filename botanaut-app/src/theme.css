@@ -21,6 +21,7 @@ html, body, #root {
   src: url("/fonts/SpaceMono-Bold.ttf") format("truetype");
 } 
 
+/* Color Variables */
 :root {
     --brand-primary: #201e4B;
     --brand-secondary: #D4A3E2;
@@ -30,13 +31,94 @@ html, body, #root {
     --outline-secondary:var(--brand-tertiary);
 }
 
-
-.homepage {
-  background-image: url("/images/planet-background.svg");
-  background-color: #ffffff;
+/* Base body styling */
+body {
+  background-color: white;
+  background-size: cover;
   background-repeat: no-repeat;
+}
+
+/* Navbar */
+.nav-bar-container {
+  position: relative;
+  width: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(36, 45, 68, 0.8) 0%,
+    rgba(36, 45, 68, 0.5) 50%,
+    rgba(36, 45, 68, 0) 100%
+  );
+  padding: 1rem 5% 2rem 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+  backdrop-filter: blur(6px);
+}
+
+.navbar-logo img, .logo-corner img {
+  height: 90px;
+  width: auto;
+  display: block;
+}
+
+.nav-bar {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.custom-link {
+color: var(--text-color);
+font-family: "SpaceMono";
+font-size: 1.4rem;
+text-decoration: none;
+position: relative;
+padding-bottom: 4px;
+transition: color 0.2s ease;
+}
+
+.custom-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: var(--brand-secondary);
+  transition: width 0.3s ease;
+}
+
+.custom-link:hover {
+  color: var(--brand-secondary);
+}
+
+.custom-link:hover::after,
+.custom-link.active::after {
+  width: 100%;
+}
+
+/* Home Page */
+.homepage {
+  min-height: 100vh;
+  background:
+    url("/images/planet-background.svg") no-repeat center top,
+    white; /* <== NEW: background-color layer */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-color: white; /* Fallback in case browser ignores shorthand */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  text-align: center;
   position: relative;
 }
+
+
 
 .bg-brand-primary {
   background-color: black;
@@ -70,84 +152,6 @@ html, body, #root {
     padding: 3rem;
   }
 
-  .nav-bar-container {
-    position: relative;
-    width: 100%;
-    background: linear-gradient(
-      to bottom,
-      rgba(36, 45, 68, 0.8) 0%,
-      rgba(36, 45, 68, 0.5) 50%,
-      rgba(36, 45, 68, 0) 100%
-    );
-    padding: 1rem 5% 2rem 5%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 10;
-    backdrop-filter: blur(6px);
-  }
-  
-  
-.navbar-logo img {
-    height: 90px;
-    margin-left: 75px;
-    width: auto;
-    display: block;
-}
-  
-.nav-bar {
-    display: flex;
-    gap: 2rem;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-  
-.custom-link {
-  color: var(--text-color);
-  font-family: "SpaceMono";
-  font-size: 1.4rem;
-  text-decoration: none;
-  position: relative;
-  padding-bottom: 4px;
-  transition: color 0.2s ease;
-}
-
-  
-  .custom-link::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -2px;
-    width: 0;
-    height: 2px;
-    background-color: var(--brand-secondary);
-    transition: width 0.3s ease;
-  }
-  
-  .custom-link:hover {
-    color: var(--brand-secondary);
-  }
-  
-  .custom-link:hover::after,
-  .custom-link.active::after {
-    width: 100%;
-  }
-
-.logo-corner {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    z-index: 1000;
-}
-  
-.logo-corner img {
-    height: 90px;
-    width: auto;
-    margin-left: 420px;
-    margin-top: 100px;
-    display: block;
-}
 
 .landing-content {
   padding: 50px;
@@ -156,21 +160,28 @@ html, body, #root {
 }
 
 .HomeLogo {
-  height: 300px;
-  width: auto;
-  display: flex;
-  padding-left: 75px;
+  width: 80%;
+  max-width: 300px;
 }
 
 .nova1 {
-  width: 700px;
-  height: 815px;
-  flex-shrink: 0;
-  aspect-ratio: 384/427;
+  width: 80%;
+  max-width: 300px;
 }
 
 .nova2 {
   width: 700px;
+}
+
+.greeting-box {
+  width: 70%;
+  background: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 50px;
+  padding: 2rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-align: center;
 }
 
 .page1 {
@@ -182,10 +193,15 @@ html, body, #root {
 }
 
 .ecoswap-bg {
-  background-image: url(/images/ecoswap.svg);
+  background-image: url("/images/ecoswap.svg");
   background-repeat: no-repeat;
-  min-height: 100vh
+  background-size: cover; /* make the background image fill the container */
+  background-position: center;
+  min-height: 100vh;
+  width: 100%;
+  background-attachment: fixed; /* optional: for cool parallax effect */
 }
+
 
 .ecoswap-1 {
   font-size: 30px;
