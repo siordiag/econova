@@ -4,14 +4,6 @@ html, body, #root {
   padding: 0;
   width: 100%;
   overflow-x: hidden;
-  
-  /* ⭐ ONE background image for entire page */
-  background: 
-    url("/images/planet-background.svg") no-repeat center top,
-    white;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center top;
 }
 
 @font-face {
@@ -50,18 +42,11 @@ body {
 .nav-bar-container {
   position: relative;
   width: 100%;
-  background: linear-gradient(
-    to bottom,
-    rgba(36, 45, 68, 0.8) 0%,
-    rgba(36, 45, 68, 0.5) 50%,
-    rgba(36, 45, 68, 0) 100%
-  );
   padding: 1rem 5% 2rem 5%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   z-index: 10;
-  backdrop-filter: blur(6px);
 }
 
 .navbar-logo img, .logo-corner img {
@@ -110,13 +95,16 @@ transition: color 0.2s ease;
 
 /* Home Page */
 .homepage {
+  background-image: url("/images/planet-background.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 2rem;
   text-align: center;
-  position: relative;
 }
 
 
@@ -153,21 +141,13 @@ transition: color 0.2s ease;
   }
 
   .nav-bar-container {
-    position: relative;
     width: 100%;
-    background: linear-gradient(
-      to bottom,
-      rgba(36, 45, 68, 0.8) 0%,
-      rgba(36, 45, 68, 0.5) 50%,
-      rgba(36, 45, 68, 0) 100%
-    );
     margin: 0;
     padding: 1rem 5% 2rem 5%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     z-index: 10;
-    backdrop-filter: blur(6px);
   }
   
   
@@ -274,7 +254,7 @@ transition: color 0.2s ease;
 .ecoswap-bg {
   background-image: url("/images/ecoswap.svg");
   background-repeat: no-repeat;
-  min-height: 100vh;
+  background-size: cover;
 }
 
 
@@ -316,6 +296,7 @@ transition: color 0.2s ease;
 .planet-bg {
   background-image: url(/images/planet-page.svg);
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .nova3 {

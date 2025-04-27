@@ -7,10 +7,8 @@ import Navbar from '../components/Navbar';
 export default function Home() {
   return (
     <>
-      <Navbar />
-
       <div className="homepage">
-        {/* HERO section with background */}
+      <Navbar />
         <div className="homepage-hero">
           <Container>
             <Row>
