@@ -27,24 +27,71 @@ export default function Planet() {
           <Row className="planets-row">
             <Col>
               <img className="planet-1" src="/images/planet-1.svg"/>
-              <img className="planet-1" src="/images/planet-1.svg"/>
-              <img className="planet-1" src="/images/planet-1.svg"/>
-              <img className="planet-1" src="/images/planet-1.svg"/>
+              <img className="planet-1" src="/images/planet-2.svg"/>
+              <img className="planet-1" src="/images/planet-3.svg"/>
+              <img className="planet-1" src="/images/planet-4.svg"/>
+            </Col>
+          </Row>
+          <Row className="status">
+            <Col className="unlocked">
+              <p>UNLOCKED</p>
+            </Col>
+            <Col className="unlocked">
+              <p>UNLOCKED</p>
+            </Col>
+            <Col>
+              <p>LOCKED</p>
+            </Col>
+            <Col>
+              <p>LOCKED</p>
+            </Col>
+          </Row>
+          <Row className="planets-row">
+            <Col>
+              <img className="planet-1" src="/images/planet-5.svg"/>
+              <img className="planet-1" src="/images/planet-6.svg"/>
+              <img className="planet-1" src="/images/planet-7.svg"/>
+              <img className="planet-1" src="/images/planet-8.svg"/>
             </Col>
           </Row>
           <Row className="status">
             <Col>
-              <p>UNLOCKED</p>
+              <p>LOCKED</p>
             </Col>
             <Col>
-              <p>UNLOCKED</p>
+              <p>LOCKED</p>
             </Col>
             <Col>
-              <p>UNLOCKED</p>
+              <p>LOCKED</p>
             </Col>
             <Col>
-              <p>UNLOCKED</p>
+              <p>LOCKED</p>
             </Col>
+          </Row>
+          <Row className="planets-row">
+            <Col>
+              <img className="planet-1" src="/images/planet-9.svg"/>
+              <img className="planet-1" src="/images/planet-10.svg"/>
+              <img className="planet-1" src="/images/planet-11.svg"/>
+              <img className="planet-1" src="/images/planet-12.svg"/>
+            </Col>
+          </Row>
+          <Row className="status">
+            <Col>
+              <p>LOCKED</p>
+            </Col>
+            <Col>
+              <p>LOCKED</p>
+            </Col>
+            <Col>
+              <p>LOCKED</p>
+            </Col>
+            <Col>
+              <p>LOCKED</p>
+            </Col>
+          </Row>
+          <Row className="planet-caption">
+            <h1>A better planet starts with a better product</h1>
           </Row>
         </Container>
       </div>

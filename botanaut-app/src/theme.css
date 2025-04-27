@@ -174,7 +174,7 @@ html, body, #root {
 .ecoswap-bg {
   background-image: url(/images/ecoswap.svg);
   background-repeat: no-repeat;
-  min-height: 100vh
+  min-height: 100vh;
 }
 
 .ecoswap-1 {
@@ -215,7 +215,6 @@ html, body, #root {
 .planet-bg {
   background-image: url(/images/planet-page.svg);
   background-repeat: no-repeat;
-  min-height: 100vh
 }
 
 .nova3 {
@@ -226,18 +225,25 @@ html, body, #root {
 
 .status {
   font-family: "SpaceMono-Bold";
-  color: var(--brand-tertiary);
+  color: #E7AAA4;;
+  text-align: center;
+  font-size: 30px;
+  justify-content: flex;
+  padding: 15px;
 }
 
 .planets-row img {
-  padding: 10px;
+  padding: 15px;
   justify-content: flex;
 }
 
 .planet-description {
   width: 324px;
-  height: 572px;
+  height: 470px;
+  font-size: 20px;
+  text-align: center;
   flex-shrink: 0;
+  padding: 20px;
   background-color: #EEEAE7;
   border-radius: 25px;
   filter: drop-shadow(4px 20px 19.6px rgba(0, 0, 0, 0.25));
@@ -263,4 +269,16 @@ html, body, #root {
 .button-description p {
   padding-bottom: 25px;
   padding-top: 25px;
+}
+
+.planet-caption {
+  color: var(--brand-tertiary);
+  font-family: "SpaceMono-Bold";
+  text-align: center;
+  font-size: 64px;
+  padding: 90px;
+}
+
+.unlocked {
+  color: var(--brand-tertiary);
 }
