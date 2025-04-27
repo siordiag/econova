@@ -271,6 +271,7 @@ html, body, #root {
   padding-top: 25px;
 }
 
+<<<<<<< HEAD
 .planet-caption {
   color: var(--brand-tertiary);
   font-family: "SpaceMono-Bold";
@@ -282,3 +283,150 @@ html, body, #root {
 .unlocked {
   color: var(--brand-tertiary);
 }
+=======
+/*ecoswap page*/
+/* Swap Total Bubble */
+.swap-total {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: black;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 30px;
+  margin-bottom: 20px;
+}
+
+/* Search Bar + Button */
+.ecoswap-search-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px auto;
+  gap: 10px;
+}
+
+.ecoswap-search-bar {
+  background-color: var(--brand-tertiary); /* light green typing area */
+  color: black;
+  border: none;
+  border-radius: 999px;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  width: 250px;
+  text-align: center;
+}
+
+.ecoswap-button {
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 999px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ecoswap-button:hover {
+  background-color: var(--brand-secondary); /* light purple hover */
+}
+
+/* Down Arrow */
+.scroll-down-arrow {
+  font-size: 2rem;
+  margin-top: 20px;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(8px);
+  }
+  60% {
+    transform: translateY(4px);
+  }
+}
+/* Results container holding both the options list and selected swap display */
+.ecoswap-results-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  margin-top: 60px;
+  padding: 20px;
+  width: 100%;
+}
+
+/* Options list on the left */
+.ecoswap-options-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 400px;
+  width: 100%;
+}
+
+/* Each swap card */
+.ecoswap-card {
+  background-color: white;
+  color: black;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.ecoswap-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+.ecoswap-card.selected {
+  border: 2px solid var(--brand-tertiary);
+}
+
+/* Selected swap preview on the right */
+.ecoswap-selected-display {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 20px;
+  padding: 20px;
+  width: 300px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+}
+
+/* Selected swap image */
+.selected-swap-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* Shopping list button */
+.add-to-shopping-list-button {
+  background-color: var(--brand-tertiary);
+  color: black;
+  border: none;
+  border-radius: 999px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-shopping-list-button:hover {
+  background-color: var(--brand-secondary);
+}
+>>>>>>> 8cc3552ca1e1eb5761d9684153e68b00cc56224a

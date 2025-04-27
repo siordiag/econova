@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { supabaseEco } from '../supabaseEco'; // updated connection
+import { supabaseEco } from '../supabaseEco';
 import Navbar from '../components/Navbar';
 
 export default function EcoSwap() {
@@ -54,23 +54,19 @@ export default function EcoSwap() {
     <div className="ecoswap-bg">
       <Navbar />
 
-      {/* Top Section: Welcome + Arrow */}
+      {/* Top Section */}
       <div className="ecoswap-1">
+        {/* Swap Counter */}
         <div className="swap-total">
           Total Swaps Saved: {swapTotal}
         </div>
 
+        {/* Welcome Paragraph */}
         <p>
           Welcome to <strong>ECOSWAP</strong>, your personal sustainability guide. Every product we use has a story—how it was made, how much water it used, how much carbon it released. Type in what you use daily, and we’ll show you smarter swaps that reduce greenhouse gases, save water, and cut down on plastic waste. Your actions matter. Make each swap count.
         </p>
 
-        <img className="down-arrow" src="/images/down-arrow.svg" alt="Scroll down" />
-      </div>
-
-      {/* Search Section */}
-      <div className="ecoswap-search-box">
-        <h1>Find Eco-Friendly Alternatives</h1>
-
+        {/* Search Input + Button */}
         <div className="ecoswap-search-input">
           <input
             type="text"
@@ -86,16 +82,19 @@ export default function EcoSwap() {
             Search
           </button>
         </div>
+
+        {/* Down Arrow */}
+        <img className="down-arrow" src="/images/down-arrow.svg" alt="Scroll down" />
       </div>
 
-      {/* Swap Results and Selected Item */}
+      {/* Swap Results */}
       {loading ? (
         <p>Loading swaps...</p>
       ) : swaps.length === 0 ? (
         <p>No swaps found for "{searchTerm}".</p>
       ) : (
         <div className="ecoswap-results-container">
-          {/* Left: List of options */}
+          {/* Left: Options */}
           <div className="ecoswap-options-list">
             {swaps.map((swap) => (
               <div
@@ -109,7 +108,7 @@ export default function EcoSwap() {
             ))}
           </div>
 
-          {/* Right: Selected option preview */}
+          {/* Right: Selected Swap */}
           <div className="ecoswap-selected-display">
             {selectedSwap ? (
               <>
