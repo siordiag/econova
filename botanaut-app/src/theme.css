@@ -97,8 +97,6 @@ transition: color 0.2s ease;
 .homepage {
   background-image: url("/images/planet-background.svg");
   background-repeat: no-repeat;
-  background-size: cover;
-
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -141,6 +139,7 @@ transition: color 0.2s ease;
   }
 
   .nav-bar-container {
+    position: relative;
     width: 100%;
     margin: 0;
     padding: 1rem 5% 2rem 5%;
@@ -148,6 +147,7 @@ transition: color 0.2s ease;
     align-items: center;
     justify-content: space-between;
     z-index: 10;
+    backdrop-filter: blur(6px);
   }
   
   
