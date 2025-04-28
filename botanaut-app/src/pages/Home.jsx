@@ -7,12 +7,13 @@ import Navbar from '../components/Navbar';
 export default function Home() {
   return (
     <>
+      {/* Full page wrapper */}
       <div className="homepage">
 
-        {/* Navbar */}
+        {/* Navbar over planet background */}
         <Navbar />
 
-        {/* Hero section with planet background */}
+        {/* Hero Section with planet background */}
         <div className="homepage-hero">
           <Container>
             <Row>
@@ -31,18 +32,9 @@ export default function Home() {
           </Container>
         </div>
 
-        {/* White background scrollable content */}
+        {/* Scrollable white section (the rest of homepage) */}
         <div className="homepage-content">
           <Container>
-
-            {/* Mission Statement */}
-            <Row className="justify-content-center my-5">
-              <Col md={8}>
-                <h2 className="mission-statement">
-                  Join NOVA and the Galactic Greening Initiative on a mission to revive forgotten planets — by making sustainable swaps right here on Earth.
-                </h2>
-              </Col>
-            </Row>
 
             {/* FIRST Z - Image Left, Text Right */}
             <Row className="align-items-center my-5">
@@ -74,14 +66,12 @@ export default function Home() {
               </Col>
             </Row>
 
-            {/* Footer Image */}
-            <Row className="justify-content-center mt-5">
-              <Col md={10}>
-                <img className="footer" src="/images/home-footer.svg" alt="Footer" />
-              </Col>
-            </Row>
-
           </Container>
+        </div>
+
+        {/* Footer Image Outside Bootstrap Container */}
+        <div className="footer-wrapper">
+          <img className="footer" src="/images/home-footer.svg" alt="Footer" />
         </div>
 
       </div>

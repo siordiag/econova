@@ -516,3 +516,16 @@ transition: color 0.2s ease;
 .add-to-shopping-list-button:hover {
   background-color: var(--brand-secondary);
 }
+
+.footer-wrapper {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.footer {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
