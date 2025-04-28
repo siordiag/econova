@@ -63,34 +63,23 @@ body {
   padding: 0;
 }
 
+/* Pill-shaped navigation links */
 .custom-link {
-color: var(--text-color);
-font-family: "SpaceMono";
-font-size: 1.4rem;
-text-decoration: none;
-position: relative;
-padding-bottom: 4px;
-transition: color 0.2s ease;
+  color: var(--text-color);
+  background-color: var(--brand-primary);
+  font-family: "SpaceMono-Bold";
+  font-size: 1.4rem;
+  text-decoration: none; /* make 100% sure there’s no underline */
+  padding: 8px 16px;
+  border-radius: 999px;
+  transition: all 0.3s ease;
+  position: static; /* REMOVE relative positioning */
 }
 
-.custom-link::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-  width: 0;
-  height: 2px;
-  background-color: var(--brand-secondary);
-  transition: width 0.3s ease;
-}
-
+/* New hover behavior */
 .custom-link:hover {
-  color: var(--brand-secondary);
-}
-
-.custom-link:hover::after,
-.custom-link.active::after {
-  width: 100%;
+  background-color: var(--brand-secondary);
+  color: var(--brand-primary);
 }
 
 /* Home Page */
@@ -164,37 +153,6 @@ transition: color 0.2s ease;
     margin: 0;
     padding: 0;
 }
-  
-.custom-link {
-  color: var(--text-color);
-  font-family: "SpaceMono";
-  font-size: 1.4rem;
-  text-decoration: none;
-  position: relative;
-  padding-bottom: 4px;
-  transition: color 0.2s ease;
-}
-
-  
-  .custom-link::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -2px;
-    width: 0;
-    height: 2px;
-    background-color: var(--brand-secondary);
-    transition: width 0.3s ease;
-  }
-  
-  .custom-link:hover {
-    color: var(--brand-secondary);
-  }
-  
-  .custom-link:hover::after,
-  .custom-link.active::after {
-    width: 100%;
-  }
 
 .logo-corner {
     position: absolute;
