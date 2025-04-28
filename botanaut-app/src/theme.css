@@ -275,6 +275,53 @@ transition: color 0.2s ease;
   padding-top: 25px;
 }
 
+/* Eco Impact Section (3 images + text) */
+.eco-impact-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+  margin-top: 80px;
+  padding: 40px 20px;
+  flex-wrap: wrap;
+}
+
+.eco-impact-card {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 20px;
+  padding: 20px;
+  width: 280px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-family: "SpaceMono";
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.eco-impact-card img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.eco-impact-card h3 {
+  font-family: "SpaceMono-Bold";
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: black;
+}
+
+.eco-impact-card p {
+  font-family: "SpaceMono";
+  font-size: 1rem;
+  color: black;
+}
+
+/* Optional: Make cards lift on hover */
+.eco-impact-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
 .home-button {
   background-color: var(--brand-tertiary);
   color: var(--brand-primary);

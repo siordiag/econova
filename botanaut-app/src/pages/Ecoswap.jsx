@@ -12,7 +12,7 @@ export default function EcoSwap() {
   const [shoppingList, setShoppingList] = useState([]);
   const [swapTotal, setSwapTotal] = useState(0);
   const [selectedSwap, setSelectedSwap] = useState(null);
-  const [apodData, setApodData] = useState(null); // <== Add APOD state
+  const [apodData, setApodData] = useState(null);
 
   useEffect(() => {
     const fetchApod = async () => {
@@ -147,6 +147,27 @@ export default function EcoSwap() {
           </div>
         </div>
       )}
+
+      {/* 🌟 Eco Impact Cards Section */}
+      <div className="eco-impact-section">
+        <div className="eco-impact-card">
+          <img src="/images/iconeconova1.svg" alt="Clear the Cosmic Skies" />
+          <h3>Clear the Cosmic Skies</h3>
+          <p>Reduce greenhouse gas emissions by choosing low-impact alternatives.</p>
+        </div>
+
+        <div className="eco-impact-card">
+          <img src="/images/iconeconova2.svg" alt="Preserve Planetary Waters" />
+          <h3>Preserve Planetary Waters</h3>
+          <p>Conserve freshwater resources by selecting products that use less water to produce.</p>
+        </div>
+
+        <div className="eco-impact-card">
+          <img src="/images/iconeconova3.svg" alt="Escape the Plastic Nebula" />
+          <h3>Escape the Plastic Nebula</h3>
+          <p>Cut down on plastic waste with reusable or eco-friendly swaps.</p>
+        </div>
+      </div>
 
       {/* NASA APOD Section */}
       {apodData && (
