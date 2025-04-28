@@ -69,11 +69,6 @@ export default function Home() {
           </Container>
         </div>
 
-        {/* Footer Image Outside Bootstrap Container */}
-        <div className="footer-wrapper">
-          <img className="footer" src="/images/home-footer.svg" alt="Footer" />
-        </div>
-
       </div>
     </>
   );

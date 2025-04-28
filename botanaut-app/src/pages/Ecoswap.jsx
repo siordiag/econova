@@ -1,6 +1,9 @@
 import { useEffect, useState } from 'react';
 import { supabaseEco } from '../supabaseEco';
 import Navbar from '../components/Navbar';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 export default function EcoSwap() {
   const [swaps, setSwaps] = useState([]);
@@ -9,6 +12,21 @@ export default function EcoSwap() {
   const [shoppingList, setShoppingList] = useState([]);
   const [swapTotal, setSwapTotal] = useState(0);
   const [selectedSwap, setSelectedSwap] = useState(null);
+  const [apodData, setApodData] = useState(null); // <== Add APOD state
+
+  useEffect(() => {
+    const fetchApod = async () => {
+      try {
+        const res = await fetch(`https://api.nasa.gov/planetary/apod?api_key=ApgJMMgkDXa6vc5DnhK0pfk9xwOQOUchbQhBcgN4`);
+        const data = await res.json();
+        setApodData(data);
+      } catch (err) {
+        console.error('Error fetching the APOD data:', err);
+      }
+    };
+
+    fetchApod();
+  }, []);
 
   const fetchSwaps = async (search) => {
     setLoading(true);
@@ -54,19 +72,19 @@ export default function EcoSwap() {
     <div className="ecoswap-bg">
       <Navbar />
 
-      {/* Top Section */}
+      {/* Top Welcome + Search Section */}
       <div className="ecoswap-1">
-        {/* Swap Counter */}
         <div className="swap-total">
           Total Swaps Saved: {swapTotal}
         </div>
 
-        {/* Welcome Paragraph */}
         <p>
-          Welcome to <strong>ECOSWAP</strong>, your personal sustainability guide. Every product we use has a story—how it was made, how much water it used, how much carbon it released. Type in what you use daily, and we’ll show you smarter swaps that reduce greenhouse gases, save water, and cut down on plastic waste. Your actions matter. Make each swap count.
+          Welcome to <strong>ECOSWAP</strong>, your personal sustainability guide. 
+          Every product we use has a story—how it was made, how much water it used, how much carbon it released. 
+          Type in what you use daily, and we’ll show you smarter swaps that reduce greenhouse gases, save water, and cut down on plastic waste. 
+          Your actions matter. Make each swap count.
         </p>
 
-        {/* Search Input + Button */}
         <div className="ecoswap-search-input">
           <input
             type="text"
@@ -83,18 +101,16 @@ export default function EcoSwap() {
           </button>
         </div>
 
-        {/* Down Arrow */}
         <img className="down-arrow" src="/images/down-arrow.svg" alt="Scroll down" />
       </div>
 
-      {/* Swap Results */}
+      {/* Swap Results Section */}
       {loading ? (
         <p>Loading swaps...</p>
       ) : swaps.length === 0 ? (
         <p>No swaps found for "{searchTerm}".</p>
       ) : (
         <div className="ecoswap-results-container">
-          {/* Left: Options */}
           <div className="ecoswap-options-list">
             {swaps.map((swap) => (
               <div
@@ -108,7 +124,6 @@ export default function EcoSwap() {
             ))}
           </div>
 
-          {/* Right: Selected Swap */}
           <div className="ecoswap-selected-display">
             {selectedSwap ? (
               <>
@@ -131,6 +146,52 @@ export default function EcoSwap() {
             )}
           </div>
         </div>
+      )}
+
+      {/* NASA APOD Section */}
+      {apodData && (
+        <Container className="apod-section">
+          <Row className="align-items-center mt-5 pt-5">
+            <Col>
+              <h1 className="font-spacemono" style={{ color: 'white' }}>
+                Why We Integrated NASA's APOD API into EcoSwap:
+              </h1>
+              <p style={{ color: 'white', marginTop: '20px' }}>
+                EcoSwap is about more than just making sustainable swaps. It’s about inspiring a sense of connection to the planet and beyond. 
+                Featuring NASA’s Astronomy Picture of the Day reminds us daily of the beauty of the universe and the importance of taking care of Earth.
+              </p>
+            </Col>
+          </Row>
+
+          <Row className="align-items-center mt-5">
+            <Col md={6}>
+              {apodData.media_type === "image" ? (
+                <img
+                  src={apodData.url}
+                  alt={apodData.title}
+                  style={{ width: "80%", borderRadius: "10px" }}
+                />
+              ) : (
+                <iframe
+                  title="space-video"
+                  src={apodData.url}
+                  frameBorder="0"
+                  allow="autoplay"
+                  allowFullScreen
+                  style={{ width: "100%", height: "400px", borderRadius: "10px" }}
+                ></iframe>
+              )}
+            </Col>
+
+            <Col md={6}>
+              <h2 style={{ color: 'white', textAlign: 'left', marginBottom: '20px' }}>{apodData.title}</h2>
+              <p style={{ color: 'white', textAlign: 'left' }}>{apodData.date}</p>
+              <p style={{ color: 'white', textAlign: 'left', marginTop: '20px' }}>
+                {apodData.explanation}
+              </p>
+            </Col>
+          </Row>
+        </Container>
       )}
     </div>
   );

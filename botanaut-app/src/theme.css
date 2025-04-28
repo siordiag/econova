@@ -254,11 +254,11 @@ transition: color 0.2s ease;
 }
 
 .ecoswap-bg {
-  background-image: url("/images/ecoswap.svg");
-  background-repeat: no-repeat;
+  background-image: url(/images/ecoswap.svg);
   background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
-
 
 .ecoswap-1 {
   font-size: 30px;
@@ -517,15 +517,47 @@ transition: color 0.2s ease;
   background-color: var(--brand-secondary);
 }
 
-.footer-wrapper {
-  width: 100%;
-  overflow-x: hidden;
+.apod-section {
+  margin-top: 80px;
+  padding: 50px 20px 100px 20px; /* Top, Left/Right, Bottom padding */
+  text-align: center;
+}
+.apod-section {
+  margin-top: 80px;
+  padding: 50px 20px 100px 20px; /* Top, Sides, Bottom padding */
+  text-align: center;
 }
 
-.footer {
+.apod-section h1 {
+  font-family: "SpaceMono-Bold";
+  font-size: 2.5rem;
+  color: var(--brand-tertiary);
+  margin-bottom: 30px;
+}
+
+.apod-section p {
+  font-family: "SpaceMono";
+  font-size: 1.2rem;
+  color: white;
+  line-height: 1.6;
+}
+
+.apod-section img, 
+.apod-section iframe {
   width: 100%;
-  height: auto;
+  max-width: 600px;
+  border-radius: 15px;
+  margin: 20px auto;
   display: block;
-  margin: 0;
-  padding: 0;
+  box-shadow: 0 0 20px var(--brand-secondary); /* <== Glow only on the image */
+}
+
+@media (max-width: 768px) {
+  .apod-section h1 {
+    font-size: 2rem;
+  }
+  
+  .apod-section p {
+    font-size: 1rem;
+  }
 }
