@@ -81,8 +81,8 @@ export default function EcoSwap() {
         <p>
           Welcome to <strong>ECOSWAP</strong>, your personal sustainability guide. 
           Every product we use has a story—how it was made, how much water it used, how much carbon it released. 
-          Type in what you use daily, and we’ll show you smarter swaps that reduce greenhouse gases, save water, and cut down on plastic waste. 
-          Your actions matter. Make each swap count.
+          <br /><br />Type in what you use daily (ex. tissues, towels, soap, etc.), and we’ll show you smarter swaps that reduce greenhouse gases, save water, and cut down on plastic waste. 
+          Your actions matter. <strong>Make sure to click on the alternative and add to your shopping cart in order to gain green points!</strong>
         </p>
 
         <div className="ecoswap-search-input">
