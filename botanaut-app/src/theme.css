@@ -236,7 +236,14 @@ transition: color 0.2s ease;
   margin-top: 2rem;
   font-weight: bold;
   font-size: 1.5rem;
-  text-align: left;
+  text-align: center;
+}
+
+.mission-statement {
+  font-family: "SpaceMono";
+  font-size: 1.8rem;
+  text-align: center;
+  color: var(--brand-primary);
 }
 
 .page1 {
